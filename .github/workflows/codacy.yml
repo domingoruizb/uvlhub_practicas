@@ -11,8 +11,9 @@ on:
 jobs:
   codacy:
     runs-on: ubuntu-24.04
-    matrix:
-      python-version: ['3.13', '3.14']
+    strategy:
+      matrix:
+        python-version: ['3.13', '3.14']
     services:
       mariadb:
         image: mariadb:12.0.2
